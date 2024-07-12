@@ -109,9 +109,6 @@ The list of packages which is used:
  "AutoMapper" Version="13.0.1" 
  
 ```
-
-<h2 align="center"> CollectionApp.DaprAdapter</h2>
-
 <h2 align="center"> CollectionApp.Data</h2>
 
 > ## Setup and Run
@@ -326,4 +323,5 @@ The list of packages which is used:
 Not exist:
    CollectionApp.WorkerPush
    CollectionApp.SmsWorker
+   CollectionApp.DaprAdapter
 -->

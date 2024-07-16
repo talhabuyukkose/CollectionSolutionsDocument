@@ -2,9 +2,12 @@
 
 > ## Properties
 * __.NET 8__ is used in this project as the primary development platform.
-* __MVC Architecture__  is employed in this project to organize the codebase effectively. 
-* __Redis__  is integrated into this project as a caching mechanism and data store. 
+* __Onion Architecture__  is employed in this project to organize the codebase effectively. 
+* __Redis__  is integrated into this project as a caching mechanism and data store.
 
+> ## Goals
+A company which cannot receive payments from customers and wants to reach customers at regular intervals
+through SMS, e-mail or call to inform them about the payment. This project is being developed to speed up this process.  
 <h2 align="center"> CollectionApp.Cli</h2>
 
 > ## Setup and Run
@@ -61,6 +64,7 @@ The list of packages which is used:
 ```
 
 <h2 align="center"> CollectionApp.Core</h2>
+Core is the central layer that contains the core business logic and rules, in other words, the heart of the project.
 
 > ## Setup and Run
 You can clone this repository using:

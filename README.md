@@ -7,7 +7,7 @@
 
 > ## Goals
 
-       A company which cannot receive payments from customers and wants to reach customers at regular intervals through SMS, e-mail or call to inform them about the payment. This project is being developed to speed up this process.   
+A company which cannot receive payments from customers and wants to reach customers at regular intervals through SMS, e-mail or call to inform them about the payment. This project is being developed to speed up this process.   
        Customers who need to be reached to inform are classified according to how to contact them. E-mail, SMS and IVN calls are sent through the system.             
        The customers to be reached by call are listed so that the bank can contact them one by one.
 
@@ -68,7 +68,7 @@ The list of packages which is used:
 
 <h2 align="center"> CollectionApp.Core</h2>
 
-      Core is the central layer that contains the core business logic and rules, in other words, the heart of the project.
+ Core is the central layer that contains the core business logic and rules, in other words, the heart of the project.
 
 > ## Setup and Run
 You can clone this repository using:
@@ -538,7 +538,7 @@ The list of packages which is used:
 
 <h2 align="center"> CollectionApp.WorkerCti</h2>
 
-      The customers that need to be called are listed here.
+ The customers that need to be called are listed here.
 
 >## Packages
 The list of packages which is used:
@@ -556,7 +556,7 @@ The list of packages which is used:
 
 <h2 align="center"> CollectionApp.WorkerEmail</h2>
 
-      Customers who will receive emails are listed here.
+ Customers who will receive emails are listed here.
 
 >## Packages
 The list of packages which is used:
@@ -572,7 +572,7 @@ The list of packages which is used:
 ```
 <h2 align="center"> CollectionApp.WorkerImporter</h2>
            
-      Pulls customer information which is necessary for transactions from the company.
+ Pulls customer information which is necessary for transactions from the company.
 
 >## Packages
 The list of packages which is used:
@@ -590,7 +590,7 @@ The list of packages which is used:
 
 <h2 align="center"> CollectionApp.WorkerIvn</h2>
 
-      The customers that need to be called by IVN are listed here.
+The customers that need to be called by IVN are listed here.
 
 >## Packages
 The list of packages which is used:
@@ -615,7 +615,7 @@ The list of packages which is used:
 
 <h2 align="center"> CollectionApp.WorkerSms</h2>
 
-      Customers who will receive SMS are listed here.
+ Customers who will receive SMS are listed here.
 
 >## Packages
 The list of packages which is used:

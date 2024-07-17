@@ -6,8 +6,11 @@
 * __Redis__  is integrated into this project as a caching mechanism and data store.
 
 > ## Goals
-A company which cannot receive payments from customers and wants to reach customers at regular intervals
-through SMS, e-mail or call to inform them about the payment. This project is being developed to speed up this process.  
+
+       A company which cannot receive payments from customers and wants to reach customers at regular intervals through SMS, e-mail or call to inform them about the payment. This project is being developed to speed up this process.   
+       Customers who need to be reached to inform are classified according to how to contact them. E-mail, SMS and IVN calls are sent through the system.             
+       The customers to be reached by call are listed so that the bank can contact them one by one.
+
 <h2 align="center"> CollectionApp.Cli</h2>
 
 > ## Setup and Run
@@ -64,7 +67,8 @@ The list of packages which is used:
 ```
 
 <h2 align="center"> CollectionApp.Core</h2>
-Core is the central layer that contains the core business logic and rules, in other words, the heart of the project.
+
+      Core is the central layer that contains the core business logic and rules, in other words, the heart of the project.
 
 > ## Setup and Run
 You can clone this repository using:
@@ -223,6 +227,293 @@ The list of packages which is used:
 ```
 <h2 align="center"> CollectionApp.RestApi</h2>
 
+>## Requests, Answers and Obligations
+### Activity
+
+ * GetByGuid  
+Fetches a specific activity using its GUID, including related entities.  
+Parameters: 
+                        
+   * guid (string) __required__ 
+
+* GetByLoanAccountGuid  
+Fetches activities related to a specific LoanAccount GUID.
+Parameters: 
+                        
+   * guid (string) __required__ 
+   * offset (integer)
+   * limit (integer)
+   * activityTypeEnum (string)
+
+* GetByPersonGuid  
+Fetches activities related to a specific Person GUID.  
+Parameters: 
+                        
+   * guid (string) __required__ 
+   * offset (integer)
+   * limit (integer)
+   * activityTypeEnum (string)
+
+* GetByWorkActionGuid  
+Fetches activities related to a specific WorkAction GUID.  
+Parameters: 
+                        
+   * guid (string) __required__ 
+   * offset (integer)
+   * limit (integer)
+   * activityTypeEnum (string)
+   * IsShowSystemUsersActivity (boolean)
+
+* GetByUserIdentityNumber  
+Fetches activities related to a specific User with userIdentityNumber.  
+Parameters: 
+                        
+   * userIdentityNumber (string) __required__ 
+   * offset (integer)
+   * limit (integer)
+   * activityTypeEnum (string)
+
+* GetByPersonGuidAndDateOnlyAgent  
+Fetches a list of activities associated with a specific person GUID.  
+Parameters: 
+                        
+   * personGuid (string) __required__ 
+   * loanAccountNumber (string)
+   * startDate (string)
+   * endDate (string)
+   * sortBy (string)
+   * sortOrder (string)
+   * offset (integer)
+   * limit (integer)
+   * userId (integer)
+   * ResultId (integer)
+   * SubResultId (integer)
+   * activityType (string)
+
+* Create  
+Creates a new activity with the provided details.
+No parameters.
+
+* Update  
+Updates an existing activity with the specified details.  
+No parameters.
+
+* Deactivate  
+Deactivates a specified activity.  
+No parameters.
+
+### Const
+
+* GetAllEnums  
+The method return all enums.  
+No parameters.  
+
+* GetActivityResults  
+Fetches a list of all ActivityResults.  
+No parameters.   
+
+* GetSegments  
+Fetches a list of all segments.  
+No parameters. 
+
+* GetActivityResultById  
+Fetches a specific ActivityResult by its Id.  
+No parameters.  
+
+* GetActivitySubResultById  
+Fetches a specific ActivitySubResult by its Id.  
+No parameters.  
+
+* GetActivitySubResults  
+Fetches a list of all ActivitySubResults.  
+No parameters.  
+
+* GetLastWorkDay  
+Returns a last work day of any month in any year.  
+Parameters: 
+                        
+   * year (integer)
+   * month (integer)
+
+### Cti
+
+* CallPermit  
+Parameters: 
+                        
+   * guid (string)  
+
+* SetCallStart  
+No parameters.  
+
+* SetCallResult  
+No parameters.  
+
+### Customer
+* GetLoanAccountPaymentByLoanAccountGuid  
+Fetches a detailed Loan Account Payments using its loanAccountGuid identifier.  
+Parameters: 
+                        
+   * loanAccountGuid (string) __required__  
+
+* GetAllAccountsBaseEntityByPersonGuid  
+Fetches a detailed base account using its personGUID identifier.  
+Parameters: 
+                        
+   * personGuid (string) __required__  
+
+* GetLoanAccountByGuid  
+Fetches a detailed loan account using its GUID identifier.  
+Parameters: 
+                        
+   * loanAccountGuid (string) __required__    
+
+* GetBaseAccountByAccountNumber  
+Fetches a detailed loan account using its GUID identifier.  
+Parameters: 
+                        
+   * accountNumber (string) __required__  
+
+* GetLoanAccountsByPersonGuid  
+Fetches loan accounts associated with a specific person's GUID.  
+Parameters: 
+                        
+   * personGuid (string) __required__  
+
+* GetLoanAccountsByCustomerNumber  
+Fetches loan accounts associated with a specific customer number.  
+Parameters: 
+                        
+   * customerNumber (integer) __required__  
+
+* GetCardAccountByGuid  
+Fetches a detailed card account using its GUID identifier.  
+Parameters: 
+                        
+   * guid (string) __required__   
+
+* GetCardAccountsByPersonGuid  
+Fetches card accounts associated with a specific person's GUID.  
+Parameters: 
+                        
+   * personGuid (string) __required__   
+
+* GetCardAccountsByCustomerNumber  
+Fetches card accounts associated with a specific customer number.  
+Parameters: 
+                        
+   * customerNumber (integer) __required__  
+
+* GetPhonesByPersonGuid  
+Fetches all phone numbers associated with a given person's GUID. This is useful for retrieving contact details linked to a person record.  
+Parameters: 
+                        
+   * personGuid (string) __required__  
+
+* GetEmailsByPersonGuid  
+Fetches all emails associated with a given person's GUID. This endpoint is intended for retrieving all registered email addresses for a specific individual.  
+Parameters: 
+                        
+   * personGuid (string) __required__  
+
+* GetAddressesByPersonGuid  
+Fetches all Addresses associated with a given person's GUID. This endpoint is intended for retrieving all registered addresses for a specific individual.  
+Parameters: 
+                        
+   * personGuid (string) __required__  
+
+* CreatePhone  
+Registers a new phone number in the system.  
+No parameters.  
+
+* UpdatePhone  
+Updates an existing phone number in the system.  
+No parameters.  
+
+* SetPhoneLastSuccessfulDate  
+Updates an existing phone number in the system. 
+No parameters.  
+
+* DeletePhone  
+Deactivates a phone number, effectively removing it from active use.  
+No parameters.   
+
+* CreateEmail  
+Registers a new email in the system.  
+No parameters. 
+
+* UpdateEmail   
+Updates an existing email in the system.  
+No parameters. 
+
+* DeleteEmail  
+Deactivates an Email, effectively removing it from active use.  
+No parameters. 
+
+* CreateAddress   
+Creates a new address record in the system.  
+No parameters. 
+
+* UpdateAddress  
+Updates an existing address record in the system.  
+No parameters.  
+
+* DeleteAddress  
+Deactivates an address record in the system.  
+No parameters.  
+
+* GetBucketChangeByPersonGuid  
+Fetches all bucket changes associated with a given person's GUID. This is useful for retrieving contact details linked to a person record.  
+Parameters: 
+                        
+   * personGuid (string) __required__  
+
+* GetBucketChangeByLoanAccountGuid  
+Fetches all bucket changes associated with a given LoanAccount's GUID. This is useful for retrieving contact details linked to a LoanAccount record.  
+Parameters: 
+                        
+   * loanAccountGuid (string) __required__  
+
+* GetCustomerByGuid  
+Fetches a detailed person using its GUID identifier.  
+Parameters: 
+                        
+   * guid (string) __required__  
+
+* GetCustomerInfoByGuid  
+Fetches a detailed person using its GUID identifier.  
+Parameters: 
+                        
+   * guid (string) __required__  
+
+* CustomerSearch  
+Fetches person models associated with a specific search. Search term take Customer Number, Identity Number, Phone Numbers, Name, MiddleName, Surname or Company Name  
+Parameters: 
+                        
+   * search (string)
+   * segment (string)
+   * Offset (integer)
+   * Limit (integer)
+   * sortBy  (string)
+   * sortOrder (string)
+   * personFlag (string)
+   * bucketEnum (string)  
+
+* GetRelationPersonByCustomerNumber  
+Fetches relational person associated with a specific customer number.  
+Parameters: 
+                        
+   * customerNumber (integer) __required__  
+
+### PromisePayment
+### ProxyServices
+### User
+### WorkAction
+### WorkList
+
+
+
+
+
 >## Packages
 The list of packages which is used:
 ```sh
@@ -247,6 +538,8 @@ The list of packages which is used:
 
 <h2 align="center"> CollectionApp.WorkerCti</h2>
 
+      The customers that need to be called are listed here.
+
 >## Packages
 The list of packages which is used:
 ```sh
@@ -263,6 +556,8 @@ The list of packages which is used:
 
 <h2 align="center"> CollectionApp.WorkerEmail</h2>
 
+      Customers who will receive emails are listed here.
+
 >## Packages
 The list of packages which is used:
 ```sh
@@ -276,6 +571,8 @@ The list of packages which is used:
  "System.Private.Uri" Version="4.3.2"  
 ```
 <h2 align="center"> CollectionApp.WorkerImporter</h2>
+           
+      Pulls customer information which is necessary for transactions from the company.
 
 >## Packages
 The list of packages which is used:
@@ -292,6 +589,8 @@ The list of packages which is used:
 ```
 
 <h2 align="center"> CollectionApp.WorkerIvn</h2>
+
+      The customers that need to be called by IVN are listed here.
 
 >## Packages
 The list of packages which is used:
@@ -316,6 +615,8 @@ The list of packages which is used:
 
 <h2 align="center"> CollectionApp.WorkerSms</h2>
 
+      Customers who will receive SMS are listed here.
+
 >## Packages
 The list of packages which is used:
 ```sh
@@ -328,4 +629,6 @@ Not exist:
    CollectionApp.WorkerPush
    CollectionApp.SmsWorker
    CollectionApp.DaprAdapter
+   CollectionApp.Core.Domain
+   CollectionApp.Infrastructure
 -->

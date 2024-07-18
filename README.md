@@ -12,101 +12,9 @@
 &nbsp; A company which cannot receive payments from customers and wants to reach customers at regular intervals through SMS, e-mail or call to inform them about the payment. This project is being developed to speed up this process.   
 &nbsp; Customers who need to be reached to inform are classified according to how to contact them. E-mail, SMS and IVN calls are sent through the system. The customers to be reached by call are listed so that the bank can contact them one by one.
 
-<h2 align="center"> CollectionApp.Cli</h2>
-
-> ## Setup and Run
-You can clone this repository using:
-
-```sh
-git https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.Cli.git
-```
-Navigate to project directory:
-```sh
-cd SolutionCollectionApp/tree/Development/CollectionApp.Cli
-```
-Restore the dependencies:
-```sh
-dotnet restore
-```
-Run the project:
-```sh
-dotnet run
-```
-
->> ### Setup in Docker Environment
-   Build the Docker image:
-   ```sh
-   docker build -t CollectionApp.Cli .
-   ```
-   Run the Docker container:
-   ```sh
-   docker run -d -p 5000:80 CollectionApp.Cli
-   ```
-
->>### Docker Compose Setup
-* yml  
-Start the container using Docker Compose:
-```sh
-docker-compose up
-```
-
-> ## Packages
-The list of packages which is used:
-```sh
- "CommandLineParser" Version="2.9.1" 
- "McMaster.Extensions.CommandLineUtils" Version="4.1.1" 
- "Microsoft.Extensions.Configuration.CommandLine" Version="8.0.0" 
- "Microsoft.Extensions.Hosting" Version="8.0.0" 
- "Microsoft.Extensions.Http" Version="8.0.0" 
- "Newtonsoft.Json" Version="13.0.3" 
- "System.ServiceModel.Duplex" Version="6.0.*" 
- "System.ServiceModel.Federation" Version="6.0.*" 
- "System.ServiceModel.Http" Version="6.0.*" 
- "System.ServiceModel.NetTcp" Version="6.0.*" 
- "System.ServiceModel.Security" Version="6.0.*" 
- "System.Text.Json" Version="8.0.4" 
-```
-
 <h2 align="center"> CollectionApp.Core</h2>
 
-&nbsp; Core is the central layer that contains the core business logic and rules, in other words, the heart of the project.
-
-> ## Setup and Run
-You can clone this repository using:
-
-```sh
-git https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.Core.git
-```
-Navigate to project directory:
-```sh
-cd SolutionCollectionApp/tree/Development/CollectionApp.Core
-```
-Restore the dependencies:
-```sh
-dotnet restore
-```
-Run the project:
-```sh
-dotnet run
-```
-
->> ### Setup in Docker Environment
-   Build the Docker image:
-   ```sh
-   docker build -t CollectionApp.Core .
-   ```
-   Run the Docker container:
-   ```sh
-   docker run -d -p 5000:80 CollectionApp.Core
-   ```
-
->>### Docker Compose Setup
-* yml  
-Start the container using Docker Compose:
-```sh
-docker-compose up
-```
-
+&nbsp; Core is the central layer that contains the core business logic and rules, in other words, the heart of the project.  
 
 >## Packages
 The list of packages which is used:
@@ -119,42 +27,6 @@ The list of packages which is used:
  
 ```
 <h2 align="center"> CollectionApp.Data</h2>
-
-> ## Setup and Run
-You can clone this repository using:
-
-```sh
-git https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.Data.git
-```
-Navigate to project directory:
-```sh
-cd SolutionCollectionApp/tree/Development/CollectionApp.Data
-```
-Restore the dependencies:
-```sh
-dotnet restore
-```
-Run the project:
-```sh
-dotnet run
-```
-
->> ### Setup in Docker Environment
-   Build the Docker image:
-   ```sh
-   docker build -t CollectionApp.Data .
-   ```
-   Run the Docker container:
-   ```sh
-   docker run -d -p 5000:80 CollectionApp.Data
-   ```
-
->>### Docker Compose Setup
-* yml  
-Start the container using Docker Compose:
-```sh
-docker-compose up
-```
 
 >## Packages
 The list of packages which is used:
@@ -196,7 +68,6 @@ dotnet ef database update <MigrationName>
 
 <h2 align="center"> CollectionApp.NUnit</h2>
 
-
 > ## Setup and Run
 You can clone this repository using:
 
@@ -211,7 +82,6 @@ Run the project:
 ```sh
 dotnet test
 ```
-
 
 >## Packages
 The list of packages which is used:

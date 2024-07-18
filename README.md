@@ -4,6 +4,8 @@
 * __.NET 8__ is used in this project as the primary development platform.
 * __Onion Architecture__  is employed in this project to organize the codebase effectively. 
 * __Redis__  is integrated into this project as a caching mechanism and data store.
+* __Docker__  is used to streamline the development and deployment processes of the application.
+* __Swagger__ is used for API documentation and testing.
 
 > ## Goals
 

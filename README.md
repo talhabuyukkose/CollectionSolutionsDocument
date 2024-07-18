@@ -7,7 +7,7 @@
 
 > ## Goals
 
-A company which cannot receive payments from customers and wants to reach customers at regular intervals through SMS, e-mail or call to inform them about the payment. This project is being developed to speed up this process.   
+       A company which cannot receive payments from customers and wants to reach customers at regular intervals through SMS, e-mail or call to inform them about the payment. This project is being developed to speed up this process.   
        Customers who need to be reached to inform are classified according to how to contact them. E-mail, SMS and IVN calls are sent through the system.             
        The customers to be reached by call are listed so that the bank can contact them one by one.
 
@@ -68,7 +68,7 @@ The list of packages which is used:
 
 <h2 align="center"> CollectionApp.Core</h2>
 
- Core is the central layer that contains the core business logic and rules, in other words, the heart of the project.
+      Core is the central layer that contains the core business logic and rules, in other words, the heart of the project.
 
 > ## Setup and Run
 You can clone this repository using:
@@ -504,14 +504,359 @@ Parameters:
                         
    * customerNumber (integer) __required__  
 
-### PromisePayment
+### PromisePayment  
+
+* GetByGuid  
+Returns a specific PromisePayment identified by GUID, including related details.  
+Parameters: 
+                        
+   * guid (string) __required__
+
+* GetByLoanAccountGuid  
+Returns PromisePayments associated with a specific LoanAccount GUID.  
+Parameters: 
+                        
+   * guid (string) __required__  
+
+* GetByActivityGuid  
+Returns PromisePayments associated with a specific Activity GUID.  
+Parameters: 
+                        
+   * guid (string) __required__  
+
+* GetByWorkActionGuid  
+Returns PromisePayments associated with a specific WorkAction GUID.  
+Parameters: 
+                        
+   * guid (string) __required__  
+
+* GetByWorklistGuid  
+Returns paginated PromisePayments associated with a specific Worklist GUID.  
+Parameters: 
+                        
+   * guid (string) __required__  
+   * offset (integer)
+   * limit (integer)
+
+* GetByPersonGuid  
+Returns paginated PromisePayments associated with a specific Person GUID.  
+Parameters: 
+                        
+   * guid (string) __required__  
+   * offset (integer)
+   * limit (integer)
+
+* GetByUserIdentityNumber  
+Returns paginated PromisePayments associated with a specific User with userIdentityNumber.  
+Parameters: 
+                        
+   * userIdentityNumber (string) __required__  
+   * offset (integer)
+   * limit (integer)
+
+* Create  
+Creates new PromisePayments based on the provided data.  
+No parameters.  
+
+* Update  
+Updates an existing PromisePayment with the specified details.  
+No parameters.
+
+* Deactivate  
+Deactivates the specified PromisePayment.  
+No parameters.
+
 ### ProxyServices
+
+* PromisePaymentCalculate  
+Parameters: 
+                        
+   * guid (string) 
+
+* GetBankAccountBalanceList 
+Fetches BankAccountBalances related to AccountBranchCode and AccountNumber.   
+Parameters:
+
+   * AccountBranchCode (string)
+   * AccountNumber (string)
+
+* GetBankAccountCautionList  
+Fetches BankAccountCautions related to AccountBranchCode and AccountNumber.  
+Parameters:
+
+   * AccountBranchCode (string)
+   * AccountNumber (string)
+
+* GetBankAccountLoanList  
+Fetches BankAccountLoans related to AccountBranchCode and AccountNumber and AccountSuffix.  
+Parameters:
+
+   * AccountBranchCode (string)
+   * AccountNumber (string)
+   * AccountSuffix (integer)
+
+* GetBankAccountLoanFutureList  
+Fetches BankAccountLoansFuture related to AccountBranchCode and AccountNumber and AccountSuffix and ForwardDay.  
+Parameters:
+
+   * AccountBranchCode (string)
+   * AccountNumber (string)
+   * AccountSuffix (integer)
+   * ForwardDay (string)
+
+* GetBankLoanCloseAmount  
+Fetches BankAccountLoans related to AccountBranchCode and AccountNumber and AccountSuffix.  
+Parameters:
+
+   * AccountBranchCode (string)
+   * AccountNumber (string)
+   * AccountSuffix (integer)
+
 ### User
+
+* GetByGuid
+Returns a specific user identified by GUID, including related details.  
+Parameters: 
+                        
+   * guid (string) __required__  
+
+* GetByIdentityNumber  
+Returns a specific user identified by userIdentityNumber, including related details.  
+Parameters: 
+                        
+   * userIdentityNumber (string) __required__  
+
+* GetAll  
+Returns a paginated list of all users.  
+Parameters:  
+
+   * offset (integer)
+   * limit (integer)
+   * sortBy (string)
+   * sortOrder (string)
+
+* GetAllUserGroups  
+Returns a paginated list of all usergroups.
+No parameters.  
+
+* GetAllWithDeActivate  
+Returns a paginated list of all users, including those who are deactivated.  
+Parameters:  
+
+   * offset (integer)
+   * limit (integer)
+
+* Summary  
+Provides statistical summary data for a specific user over a given period.  
+Parameters:
+
+   * userGuid (string)
+   * startDate (string)
+   * endDate (string)
+
+* Update  
+Updates the details of an existing user.
+No parameters.  
+
+* UpdateUserWorklists  
+Updates the worklists assigned to a specific user.  
+No parameters.
+
+* Deactivate  
+Deactivates a specific user, rendering them inactive in the system.  
+No parameters.  
+
+* Synchronize  
+Create user or update with the specified details.  
+No parameters.
+
 ### WorkAction
+
+* GetByGuid
+Fetches a detailed view of a specific work action identified by GUID.
+Parameters: 
+                        
+   * guid (string) __required__  
+
+* GetByWorkListGuid  
+Fetches a paginated list of work actions associated with a specific worklist GUID.  
+Parameters: 
+                        
+   * WorkListGuid (string) __required__  
+   * name (string)
+   * IdentityNumber (string)
+   * AccountNumber (string)
+   * Status (string)
+   * BucketEnum (string)
+   * ActivityResultId (integer)
+   * ActivitySubresultId (integer)
+   * offset (integer)
+   * Limit (integer)
+   * sortBy (string)
+   * sortOrder (string) 
+
+* GetByPersonGuidAndDate  
+Fetches a list of work actions associated with a specific worklist GUID.  
+Parameters:
+
+   * personGuid (string) __required__
+   * startDate (string)
+   * loanAccountNumber (string)
+   * endDate (string)
+   * sortBy (string)
+   * sortOrder (string) 
+   * worklistType (string)
+
+* GetByPersonGuid  
+Fetches a paginated list of work actions associated with a specific person's GUID.  
+Parameters:
+
+   * guid (string) __required__ 
+   * offset (integer)
+   * Limit (integer)
+   * sortBy (string)
+   * sortOrder (string) 
+
+* GetByLoanAccountGuid  
+Fetches a paginated list of work actions linked to a specific loan account GUID.  
+Parameters:
+
+   * guid (string) __required__ 
+   * offset (integer)
+   * Limit (integer)
+   * sortBy (string)
+   * sortOrder (string) 
+
+* GetByUserIdentityNumber  
+Fetches a paginated list of work actions linked to a specific user's userId.  
+Parameters: 
+                        
+   * userIdentityNumber (string) __required__  
+   * name (string)
+   * IdentityNumber (string)
+   * AccountNumber (string)
+   * WorkListGuid (string)
+   * Status (string)
+   * BucketEnum (string)
+   * ActivityResultId (integer)
+   * ActivitySubresultId (integer)
+   * offset (integer)
+   * Limit (integer)
+   * sortBy (string)
+   * sortOrder (string)
+
+* GetWorkActionByPersonCustomerNumber  
+Fetches a list of work actions associated with a specific Person.CustomerNumber  
+Parameters: 
+                        
+   * customerNumber (string) __required__ 
+
+* GetWorkActionByPersonIdentityNumber  
+Fetches a list of work actions associated with a specific Person.IdentityNumber.  
+Parameters: 
+                        
+   * identityNumber (string) __required__ 
+
+* GetWorkActionByAccountAccountNumber  
+Fetches a list of work actions associated with a specific LoanAccount.AccountNumber.  
+Parameters: 
+                        
+   * accountNumber (string) __required__ 
+   * worklistType (string)
+
+* FindWorkAction  
+Fetches a detailed view of a specific work action identified by GUID.  
+Parameters: 
+                        
+   * CustomerNumber (integer)
+   * ContactPersonIdentityNumber (string)
+   * ActivityUuid
+
+* Create  
+Creates a new work action based on the provided data.  
+No parameters.
+
+* Update  
+Updates an existing work action with the provided new details.  
+No parameters.
+
+* UpdateById  
+Updates an existing work action with the provided new details.  
+No parameters.
+
+* MoveActions  
+Transfers selected work actions to a different worklist based on the provided parameters.  
+No parameters.
+
+* Deactivate  
+Deactivates a specific work action, rendering it inactive within the system.  
+No parameters.
+
+* UpdateStatusWorkActionById  
+No parameters.
+
 ### WorkList
 
+* GetByGuid
+Fetches a detailed worklist including relational data based on a specific GUID.  
+Parameters:
 
+   * guid (string) __required__ 
 
+* GetAll
+Fetches all worklists with pagination support.  
+Parameters:
+
+   * Offset (integer)
+   * Limit (integer)
+
+* GetAllWithUsers  
+Fetches all worklists support.  
+No parameters.
+
+* GetByPersonal
+Fetches worklists filtered by whether they are personal or shared.  
+Parameters:
+
+   * isPersonel (boolean)
+
+* GetByUserIdentityNumber  
+Fetches worklists associated with a specific user based on the user's with userIdentityNumber.  
+Parameters:
+
+   * userIdentityNumber (string) __required__
+
+* GetByUserGroupGuid  
+Fetches worklists associated with a specific user group based on the group's GUID.  
+Parameters:
+
+   * userGroupGuid (string)
+
+* GetByType
+Fetches worklists associated with a specific user group based on the type.  
+Parameters:
+
+   * worklistTypeEnum (string)
+
+* Create
+Creates a new worklist based on the provided information.  
+No parameters.
+
+* Update  
+Updates an existing worklist with new details as provided.  
+No parameters.  
+
+*  UpdateWorklistUsers  
+Updates the list of users associated with a particular worklist.  
+No parameters.
+
+* UpdateWorklistUserGroups  
+Updates the list of user groups associated with a particular worklist.  
+No parameters. 
+
+* Deactivate  
+Deactivates a worklist, rendering it inactive in the system.  
+No parameters.
 
 
 >## Packages
@@ -538,7 +883,7 @@ The list of packages which is used:
 
 <h2 align="center"> CollectionApp.WorkerCti</h2>
 
- The customers that need to be called are listed here.
+      The customers that need to be called are listed here.
 
 >## Packages
 The list of packages which is used:
@@ -556,7 +901,7 @@ The list of packages which is used:
 
 <h2 align="center"> CollectionApp.WorkerEmail</h2>
 
- Customers who will receive emails are listed here.
+      Customers who will receive emails are listed here.
 
 >## Packages
 The list of packages which is used:
@@ -572,7 +917,7 @@ The list of packages which is used:
 ```
 <h2 align="center"> CollectionApp.WorkerImporter</h2>
            
- Pulls customer information which is necessary for transactions from the company.
+      Pulls customer information which is necessary for transactions from the company.
 
 >## Packages
 The list of packages which is used:
@@ -590,7 +935,7 @@ The list of packages which is used:
 
 <h2 align="center"> CollectionApp.WorkerIvn</h2>
 
-The customers that need to be called by IVN are listed here.
+      The customers that need to be called by IVN are listed here.
 
 >## Packages
 The list of packages which is used:
@@ -615,7 +960,7 @@ The list of packages which is used:
 
 <h2 align="center"> CollectionApp.WorkerSms</h2>
 
- Customers who will receive SMS are listed here.
+      Customers who will receive SMS are listed here.
 
 >## Packages
 The list of packages which is used:

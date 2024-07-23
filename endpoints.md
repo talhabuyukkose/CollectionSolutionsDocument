@@ -31,6 +31,14 @@ If this guid does not exist, it gives not found message with statusCode: 400.
      date: Tue,23 Jul 2024 07:56:33 GMT 
      server: Kestrel 
      transfer-encoding: chunked 
+&nbsp;
+
+     {
+     "statusCode": 200,
+     "message": "Activities have been get by guid(5dd3cec1-7aff-4b0e-b6f1-1e53e7d283c5)",
+     "dateTime": "2024-07-23T08:56:16.5042445Z",
+     "data": {...}
+     }
 
 ### Get an Activity using spesific LoanAccount Guid
 
@@ -58,3 +66,17 @@ If this loan guid does not exist, it gives not found message with statusCode: 40
      date: Tue,23 Jul 2024 08:19:42 GMT 
      server: Kestrel 
      transfer-encoding: chunked
+
+&nbsp;
+
+    {
+    "totalRowCount": 0,
+    "totalPageCount": 1,
+    "offset": 0,
+    "limit": 10,
+    "statusCode": 400,
+    "message": "Loan Account not found",
+    "dateTime": "2024-07-23T10:45:14.6594402Z",
+    "data": null
+    }
+     

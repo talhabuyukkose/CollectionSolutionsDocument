@@ -3,7 +3,7 @@
 
 * [Properties](#Properties)
 * [Goals](#Goals)
-* [CollectionApp.Core](#<h2 align="center"> CollectionApp.Core</h2>)
+* [CollectionApp.Core](#collectionapp-core)
 * 
 
 > ## Properties
@@ -18,7 +18,7 @@
 &nbsp; A company which cannot receive payments from customers and wants to reach customers at regular intervals through SMS, e-mail or call to inform them about the payment. This project is being developed to speed up this process.   
 &nbsp; Customers who need to be reached to inform are classified according to how to contact them. E-mail, SMS and IVN calls are sent through the system. The customers to be reached by call are listed so that the bank can contact them one by one.
 
-<h2 align="center"> CollectionApp.Core</h2>
+<h2 align="center" id="collectionapp-core"> CollectionApp.Core</h2>
 
 &nbsp; Core is the central layer that contains the core business logic and rules, in other words, the heart of the project.  
 

@@ -3,7 +3,7 @@
 
 * [Properties](#Properties)
 * [Goals](#Goals)
-* [CollectionApp.Core](#CollectionApp.Core)
+* [CollectionApp.Core](#<h2 align="center"> CollectionApp.Core</h2>)
 * 
 
 > ## Properties

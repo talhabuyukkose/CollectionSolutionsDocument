@@ -13,7 +13,7 @@
 | :--- | :--- | :--- |
 | `guid` | `string` | **Required** |
 
-If the given guid is valid, it returns all the activities that match this guid.   
+If the given guid is valid, it returns all the activities that match this guid. (Such as CREATE, CALL_AUTO, CALL_INBOUND, CALL_MANUAL, CALL_TRANSFER, CALL_CLOSE, ACT_MOVE, MEMO, SMS, EMAIL, PUSH, IVN)  
 If this guid does not exist, it gives not found message with statusCode: 400.
 
 #### Request
@@ -41,7 +41,7 @@ If this guid does not exist, it gives not found message with statusCode: 400.
 | `limit`| `integer`||
 | `activityTypeEnum`| `string`||
 
-If the given loan guid is valid, it returns all the activities that match this guid.   
+If the given loan guid is valid, it returns all the activities that match this guid. (Such as CREATE, CALL_AUTO, CALL_INBOUND, CALL_MANUAL, CALL_TRANSFER, CALL_CLOSE, ACT_MOVE, MEMO, SMS, EMAIL, PUSH, IVN)  
 If this loan guid does not exist, it gives not found message with statusCode: 400.
 
 ### Request

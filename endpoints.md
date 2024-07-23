@@ -13,6 +13,9 @@
 | :--- | :--- | :--- |
 | `guid` | `string` | **Required** |
 
+If the given guid is valid, it returns all the activities that match this guid.   
+If this guid does not exist, it gives not found message with statusCode: 400.
+
 #### Request
 
 `GET Activity/GetByGuid?guid`
@@ -37,6 +40,10 @@
 | `offset`| `integer`||
 | `limit`| `integer`||
 | `activityTypeEnum`| `string`||
+
+If the given loan guid is valid, it returns all the activities that match this guid.   
+If this loan guid does not exist, it gives not found message with statusCode: 400.
+
 ### Request
 
 `GET Activity/GetByLoanAccountGuid?guid&Offset&Limit&activityTypeEnum`

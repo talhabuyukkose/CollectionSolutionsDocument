@@ -108,6 +108,8 @@ The list of packages which is used:
 ```
 <h2 align="center" id="RestApi"> CollectionApp.RestApi</h2>
 
+[To See Endpoints](https://github.com/aysegulsum/CollectionSolutionsDocument/blob/main/endpoints.md)
+
 >## Requests, Answers and Obligations
 ### Activity
 

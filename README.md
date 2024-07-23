@@ -1,6 +1,6 @@
 <h1 align="center"> COLLECTION SOLUTIONS</h1>
 > ## Contents 
-* [Properties](-Properties-)
+* [Properties](#Properties)
 
 > ## Properties
 * __.NET 8__ is used in this project as the primary development platform.

@@ -1,5 +1,6 @@
 <h1 align="center"> COLLECTION SOLUTIONS</h1>
 > ## Contents  
+
 * [Properties](#Properties)
 
 > ## Properties

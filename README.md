@@ -2,6 +2,9 @@
 > ## Contents  
 
 * [Properties](#Properties)
+* [Goals](#Goals)
+* [CollectionApp.Core](#CollectionApp.Core)
+* 
 
 > ## Properties
 * __.NET 8__ is used in this project as the primary development platform.

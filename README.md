@@ -1,10 +1,14 @@
 <h1 align="center"> COLLECTION SOLUTIONS</h1>
+
 > ## Contents  
 
 * [Properties](#Properties)
 * [Goals](#Goals)
 * [CollectionApp.Core](#collectionapp-core)
-* 
+* [CollectionApp.Data](#data)
+* [CollectionApp.NUnit](#NU)
+* [CollectionApp.RestApi](#RestApi)
+* [CollectionApp.WorkerCti](#workers)
 
 > ## Properties
 * __.NET 8__ is used in this project as the primary development platform.
@@ -32,7 +36,7 @@ The list of packages which is used:
  "AutoMapper" Version="13.0.1" 
  
 ```
-<h2 align="center"> CollectionApp.Data</h2>
+<h2 align="center id="data""> CollectionApp.Data</h2>
 
 >## Packages
 The list of packages which is used:
@@ -72,7 +76,7 @@ dotnet ef migrations remove
 dotnet ef database update <MigrationName>
 ```
 
-<h2 align="center"> CollectionApp.NUnit</h2>
+<h2 align="center" id="NU"> CollectionApp.NUnit</h2>
 
 > ## Setup and Run
 You can clone this repository using:
@@ -102,7 +106,7 @@ The list of packages which is used:
  "coverlet.collector" Version="6.0.2">
  "System.Text.RegularExpressions" Version="4.3.1" 
 ```
-<h2 align="center"> CollectionApp.RestApi</h2>
+<h2 align="center" id="RestApi"> CollectionApp.RestApi</h2>
 
 >## Requests, Answers and Obligations
 ### Activity
@@ -758,7 +762,7 @@ The list of packages which is used:
  "System.Private.Uri" Version="4.3.2"  
 ```
 
-<h2 align="center"> CollectionApp.WorkerCti</h2>
+<h2 align="center" id="workers"> CollectionApp.WorkerCti</h2>
 
 &nbsp; The customers that need to be called are listed here.
 

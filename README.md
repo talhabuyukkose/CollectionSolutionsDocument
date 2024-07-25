@@ -1,9 +1,13 @@
-<h1 align="center"> COLLECTION SOLUTIONS</h1>
+<h1 align="center"> COLLECTION APP</h1>
 
-> ## Contents  
+This project is a software system designed to manage communication channels for a bank, ensuring payments from customers who have missed their payments. The system enables agent personnel to make automatic calls to customers and send notifications via SMS, email, and IVR.
 
+> ## Documentation  
+
+* [Features](#Features)  
 * [Properties](#Properties)  
 * [Goals](#Goals)
+* [Installation](#Installation)
 * CollectionAppCli
    * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.Cli)
 * [CollectionApp.Core](#collectionapp-core)
@@ -33,6 +37,15 @@
    * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.WorkerSms)
 
 
+> ## Features
+
+- **Automatic Calls:** Allows agent personnel to make automatic calls to customers.
+- **Notification Management:** Sends notifications to customers via SMS, email, and IVR.
+- **Situation Management:** Guides bank personnel on the steps to take based on the customer's situation using the software.
+- **Data Transfer:** Daily data transfers from the bank to the project.
+- **Task Allocation:** Calculates daily tasks and directs the necessary work to agents.
+- **Reporting:** Provides daily reports on the operations.
+
 
 > ## Properties
 * __.NET 8__ is used in this project as the primary development platform.
@@ -60,7 +73,65 @@ The list of packages which is used:
  "AutoMapper" Version="13.0.1" 
  
 ```
+> ## Installation
 
+### Requirements
+
+- .NET 8 SDK
+- PostgreSQL server
+
+### Steps
+
+1. **Clone the repository:**
+    ```bash
+    git clone [https://github.com/username/project_name.git](https://github.com/sadeyazilim/SolutionCollectionApp.git)
+    ```
+
+2. **Navigate to the project directory:**
+    ```bash
+    cd .\CollectionApp.RestApi\
+    ```
+
+3. **Restore the .NET dependencies:**
+    ```bash
+    dotnet restore
+    ```
+
+4. **Set up the database:**
+    - Update the `appsettings.json` file with your database connection string:
+        ```json
+        {
+          "ConnectionStrings": {
+             "CollectionDatabase": "UserID=postgres; Password=11111111; Host=localhost; Port=7632; Database=collappdb; Pooling=true;"
+           }
+        }
+        ```
+
+    - Apply the database migrations:
+        ```bash
+        dotnet ef migrations add firstmigration --startup-project --context CollectionDbContext
+        ```
+
+5. **Run the project:**
+    ```bash
+    dotnet run
+    ```
+
+### Additional Tools
+
+- **Entity Framework Core:** Used for database operations.
+- **ASP.NET Core:** For building the web API and handling requests.
+
+## Usage
+
+- **Initiate Automatic Calls:** 
+    - [Steps to initiate automatic calls]
+
+- **Send Notifications:**
+    - [Steps to send notifications]
+
+- **View Reports:**
+    - [Steps to view reports]
 <h2 align="center" id="Inf"> CollectionApp.Infrastructure</h2>
 
 

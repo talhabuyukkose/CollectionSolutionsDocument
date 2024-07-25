@@ -4,14 +4,14 @@
 
 * [Properties](#Properties)  
 * [Goals](#Goals)
-* [CollectionAppCli]
+* CollectionAppCli
    * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.Cli)
 * [CollectionApp.Core](#collectionapp-core)
    * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.Core)
    * [CollectionApp.Core.Domain](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.Core.Domain)
 * [CollectionApp.Data](#data)  
    * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.Data)
-* [CollectionApp.Infrastructure]
+* [CollectionApp.Infrastructure](#Inf)
    * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.Infrastructure)
 * [CollectionApp.NUnit](#NU)
    * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.NUnit)
@@ -99,7 +99,7 @@ dotnet ef migrations remove
 ```sh
 dotnet ef database update <MigrationName>
 ```
-<h2 align="center" id="NU"> CollectionApp.Infrastructure</h2>
+<h2 align="center" id="Inf"> CollectionApp.Infrastructure</h2>
 
 
 <h2 align="center" id="NU"> CollectionApp.NUnit</h2>

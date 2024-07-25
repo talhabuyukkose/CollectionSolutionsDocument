@@ -23,7 +23,7 @@
    * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.WorkerCti)
 * [CollectionApp.WorkerEmail](https://github.com/aysegulsum/CollectionSolutionsDocument/blob/main/Workers.md#-collectionappworkeremail)
    * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.WorkerEmail)
-* [CollectionApp.WorkerImporter](https://github.com/aysegulsum/CollectionSolutionsDocument/blob/main/Workers.md#-collectionappworkerimporter))
+* [CollectionApp.WorkerImporter](https://github.com/aysegulsum/CollectionSolutionsDocument/blob/main/Workers.md#-collectionappworkerimporter)
    * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.WorkerImporter)
 * [CollectionApp.WorkerIvn](https://github.com/aysegulsum/CollectionSolutionsDocument/blob/main/Workers.md#-collectionappworkerivn)
    * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.WorkerIvn)

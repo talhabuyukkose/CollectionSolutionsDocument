@@ -2,13 +2,32 @@
 
 > ## Contents  
 
-* [Properties](#Properties)
-* [Goals](#Goals)
+* [Properties](#Properties)  
+* [Goals](#Goals)  
 * [CollectionApp.Core](#collectionapp-core)
-* [CollectionApp.Data](#data)
+   * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.Core)
+* [CollectionApp.Data](#data)  
+   * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.Data)
 * [CollectionApp.NUnit](#NU)
+   * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.NUnit)
 * [CollectionApp.RestApi](#RestApi)
-* [CollectionApp.WorkerCti](#workers)
+   * [SetUp](Api-Setup-and-Run)
+   * [Endpoints](https://github.com/aysegulsum/CollectionSolutionsDocument/blob/main/endpoints.md)
+   * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.RestApi)
+* [CollectionApp.WorkerCti](#workerCti)
+   * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.WorkerCti)
+* [CollectionApp.WorkerEmail](#workerEmail)
+   * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.WorkerEmail)
+* [CollectionApp.WorkerImporter](#workerImporter)
+   * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.WorkerImporter)
+* [CollectionApp.WorkerIvn](#workerIvn)
+   * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.WorkerIvn)
+* [CollectionApp.WorkerKafka](#workerKafka)
+   * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.WorkerKafka)
+* [CollectionApp.WorkerSms](#workerSms)
+   * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.WorkerSms)
+
+
 
 > ## Properties
 * __.NET 8__ is used in this project as the primary development platform.
@@ -108,7 +127,35 @@ The list of packages which is used:
 ```
 <h2 align="center" id="RestApi"> CollectionApp.RestApi</h2>
 
-[To See Endpoints](https://github.com/aysegulsum/CollectionSolutionsDocument/blob/main/endpoints.md)
+> ## Api Setup and Run
+
+You can clone this repository using:
+
+```sh
+git https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.RestApi.git
+```
+Navigate to project directory:
+```sh
+cd SolutionCollectionApp/tree/Development/CollectionApp.RestApi
+```
+Restore the dependencies:
+```sh
+dotnet restore
+```
+Run the project:
+```sh
+dotnet run
+```
+
+>> ### Setup in Docker Environment
+   Build the Docker image:
+   ```sh
+   docker build -t CollectionApp.RestApi .
+   ```
+   Run the Docker container:
+   ```sh
+   docker run -d -p 5000:80 CollectionApp.RestApi
+   ```
 
 >## Requests, Answers and Obligations
 ### Activity
@@ -764,9 +811,10 @@ The list of packages which is used:
  "System.Private.Uri" Version="4.3.2"  
 ```
 
-<h2 align="center" id="workers"> CollectionApp.WorkerCti</h2>
+<h2 align="center" id="workerCti"> CollectionApp.WorkerCti</h2>
 
-&nbsp; The customers that need to be called are listed here.
+&nbsp; 
+The customers that need to be called are listed here. 
 
 >## Packages
 The list of packages which is used:
@@ -782,7 +830,7 @@ The list of packages which is used:
  "System.Text.Json" Version="8.0.4"  
 ```
 
-<h2 align="center"> CollectionApp.WorkerEmail</h2>
+<h2 align="center" id="workerEmail"> CollectionApp.WorkerEmail</h2>
 
 &nbsp; Customers who will receive emails are listed here.
 
@@ -798,7 +846,7 @@ The list of packages which is used:
  "runtime.unix.System.Private.Uri" Version="4.3.2"  
  "System.Private.Uri" Version="4.3.2"  
 ```
-<h2 align="center"> CollectionApp.WorkerImporter</h2>
+<h2 align="center" id="workerImporter"> CollectionApp.WorkerImporter</h2>
            
 &nbsp; Pulls customer information which is necessary for transactions from the company.
 
@@ -816,7 +864,7 @@ The list of packages which is used:
  "System.Private.Uri" Version="4.3.2"  
 ```
 
-<h2 align="center"> CollectionApp.WorkerIvn</h2>
+<h2 align="center" id="workerIvn"> CollectionApp.WorkerIvn</h2>
 
 &nbsp; The customers that need to be called by IVN are listed here.
 
@@ -828,7 +876,7 @@ The list of packages which is used:
  "System.Text.Json" Version="8.0.4"  
 ```
 
-<h2 align="center"> CollectionApp.WorkerKafka</h2>
+<h2 align="center" id="workerKafka"> CollectionApp.WorkerKafka</h2>
 
 >## Packages
 The list of packages which is used:
@@ -841,7 +889,7 @@ The list of packages which is used:
  "System.Text.Json" Version="8.0.4"  
 ```
 
-<h2 align="center"> CollectionApp.WorkerSms</h2>
+<h2 align="center" id="workerSms"> CollectionApp.WorkerSms</h2>
 
 &nbsp; Customers who will receive SMS are listed here.
 

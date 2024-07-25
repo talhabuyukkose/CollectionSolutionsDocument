@@ -126,8 +126,7 @@ The list of packages which is used:
  "System.Text.RegularExpressions" Version="4.3.1" 
 ```
 <h2 align="center" id="RestApi"> CollectionApp.RestApi</h2>
-
-> ## Setup and Run {#api}
+<h3 id="api"> Setup and Run</h3>
 
 You can clone this repository using:
 

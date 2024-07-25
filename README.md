@@ -5,15 +5,14 @@
 * [Properties](#Properties)  
 * [Goals](#Goals)
 * [CollectionAppCli]
-   *[Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.Cli)
+   * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.Cli)
 * [CollectionApp.Core](#collectionapp-core)
    * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.Core)
-   * [CollectionApp.Core.Domain]
-     *[Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.Core.Domain)
+   * [CollectionApp.Core.Domain](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.Core.Domain)
 * [CollectionApp.Data](#data)  
    * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.Data)
 * [CollectionApp.Infrastructure]
-   *[Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.Infrastructure)
+   * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.Infrastructure)
 * [CollectionApp.NUnit](#NU)
    * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.NUnit)
 * [CollectionApp.RestApi](#RestApi)

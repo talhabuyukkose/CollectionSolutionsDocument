@@ -16,7 +16,7 @@
 * [CollectionApp.NUnit](#NU)
    * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.NUnit)
 * [CollectionApp.RestApi](https://github.com/aysegulsum/CollectionSolutionsDocument/blob/main/RestApi.md)
-   * [SetUp](https://github.com/aysegulsum/CollectionSolutionsDocument/blob/main/RestApi.md#-setup-and-run)
+   <!--* [SetUp](https://github.com/aysegulsum/CollectionSolutionsDocument/blob/main/RestApi.md#-setup-and-run)-->
    * [Endpoints](https://github.com/aysegulsum/CollectionSolutionsDocument/blob/main/endpoints.md)
    * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.RestApi)
 * [CollectionApp.WorkerCti](https://github.com/aysegulsum/CollectionSolutionsDocument/blob/main/Workers.md#-collectionappworkercti)

@@ -99,6 +99,8 @@ dotnet ef migrations remove
 ```sh
 dotnet ef database update <MigrationName>
 ```
+<h2 align="center" id="NU"> CollectionApp.Infrastructure</h2>
+
 
 <h2 align="center" id="NU"> CollectionApp.NUnit</h2>
 

@@ -11,7 +11,7 @@
 * [CollectionApp.NUnit](#NU)
    * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.NUnit)
 * [CollectionApp.RestApi](#RestApi)
-   * [SetUp](#api-setup)
+   * [SetUp](#api)
    * [Endpoints](https://github.com/aysegulsum/CollectionSolutionsDocument/blob/main/endpoints.md)
    * [Repository](https://github.com/sadeyazilim/SolutionCollectionApp/tree/Development/CollectionApp.RestApi)
 * [CollectionApp.WorkerCti](#workerCti)
@@ -127,7 +127,7 @@ The list of packages which is used:
 ```
 <h2 align="center" id="RestApi"> CollectionApp.RestApi</h2>
 
-> ## Setup and Run {api-setup}
+> ## Setup and Run {#api}
 
 You can clone this repository using:
 

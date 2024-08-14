@@ -22,7 +22,7 @@ Fetches a specific activity using its GUID, including related entities.
 curl -X GET "http://localhost:7080/api/v3/Activity/GetByGuid?guid=c43d37ea-d71c-4454-9244-afba4e8dc522" -H "Accept: text/plain"
 ```
 <details>
-<summary>Example Response</summary>
+<summary><h4></h4> Example Response</h4></summary>
   
 ```json
 {

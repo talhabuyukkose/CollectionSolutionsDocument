@@ -1,23 +1,23 @@
 
-### ***Retrieve an Activity by GUID*** 
+#### ***Retrieve an Activity by GUID*** 
  **GET**  `/api/v3/Activity/GetByGuid`
 
-### Description
+#### Description
 Fetches a specific activity using its GUID, including related entities.
 
-### Query Parameters
+##### Query Parameters
 
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
 | `guid` | `guid` | (***Required***) The GUID of the activity to retrieve. |
 
-### Headers
+##### Headers
 
 | Key | Value |
 | :--- | :--- |
 | `Content-Type` | `application/json` |
 
-### Request
+##### Request
 ```bash
 curl -X GET "http://localhost:7080/api/v3/Activity/GetByGuid?guid=c43d37ea-d71c-4454-9244-afba4e8dc522" -H "Accept: text/plain"
 ```
